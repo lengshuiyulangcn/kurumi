@@ -18,17 +18,24 @@ Or install it yourself as:
 
     $ gem install cseg
 
-you need to install CRF++ first and set the environment environment variables.
+you need to install CRF++ first and set the environment variables.
 
 Here is the site of CRF++<http://crfpp.googlecode.com/svn/trunk/doc/index.html> and you should follow the manual
 
 On github the dictionary file was deleted since it is quite large, though you can get all from rubygems.
+
+## recall and Precision
+
+Tested on seghanbakeoff pku test set
+
+Precision: 94.43%
+
+Recall: 92.86%
 	
 ## Usage
 
     require "cseg"
-    a=Kurumi.segment("屌丝是一种自我讽刺")
-    
+    a=Kurumi.segment("屌丝是一种自我讽刺")  
     =>屌丝/是/一/种/自我/讽刺
 	
 	the result will be an array.

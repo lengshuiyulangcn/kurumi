@@ -30,6 +30,7 @@ class Kurumi
 				#nil
 				if word!=""
 					@result.push(word)
+					word=""
 				end
 			end
 
