@@ -17,6 +17,7 @@ Gem::Specification.new do |gem|
 						"README.md",
 						"Gemfile",
 						"data/pkumodle.data",
+						"data/as_training_less.data",
 						"lib/cseg/version.rb",
 						"lib/cseg.rb",
 						"cseg.gemspec",

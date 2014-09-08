@@ -1,11 +1,19 @@
 # encoding:utf-8
 require "cseg/version"
-require "tempfile"
 class Kurumi
 	# since crf++ can only read from file
-	@modle=File.expand_path("../../data/pkumodle.data", __FILE__)
-	def self.segment(str)
+	@modle_sp=File.expand_path("../../data/as_training.data", __FILE__)
+	@modle_tr=File.expand_path("../../data/as_training_less.data", __FILE__)
+	def self.segment(str, mode="sp")
 	  @result=Array.new
+	  	case mode
+			when "sp"
+			       @modle=@modle_sp
+			when "tr"
+		 		@modle=@modle_tr
+			else
+			raise "no such parameter, please use sp or tr"		
+		end
 	  result_data = IO.popen "crf_test -m #{@modle}", 'r+' do |io|
   		io.puts *str.chars
   		io.close_write
@@ -33,5 +41,5 @@ class Kurumi
 		return @result
 	end
 end
-# result=Kurumi.segment("屌丝是一种生活态度")
-# print result
+
+#puts Kurumi.segment("中華民國100週年紀念。","tr")
