@@ -42,4 +42,4 @@ class Kurumi
 	end
 end
 
-#puts Kurumi.segment("中華民國100週年紀念。","tr")
+print Kurumi.segment("屌丝是一种自我讽刺。")
