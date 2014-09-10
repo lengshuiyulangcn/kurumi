@@ -42,4 +42,4 @@ class Kurumi
 	end
 end
 
-print Kurumi.segment("屌丝是一种自我讽刺。")
+#print Kurumi.segment("屌丝是一种自我讽刺。")
