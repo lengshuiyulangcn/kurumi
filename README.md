@@ -35,13 +35,13 @@ Recall: 92.86%
 ## Usage
 
 ```ruby
-The default is Simplified Chinese
-    require "cseg"
-    Kurumi.segment("屌丝是一种自我讽刺。")
-=>["屌丝", "是", "一", "种", "自我", "讽刺", "。"]
-Use parameter "tr" to specify Traditional Chinese
-    Kurumi.segment("台妹真是正點。","tr")  
-=>["台妹", "真", "是", "正點", "。"]	
+#The default is Simplified Chinese
+require "cseg"
+Kurumi.segment("屌丝是一种自我讽刺。")
+#=>["屌丝", "是", "一", "种", "自我", "讽刺", "。"]
+#Use parameter "tr" to specify Traditional Chinese
+Kurumi.segment("台妹真是正點。","tr")  
+#=>["台妹", "真", "是", "正點", "。"]	
 
 ```	
 
